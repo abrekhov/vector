@@ -122,6 +122,19 @@ fn main() {
         println!("cargo:rerun-if-changed=proto/dd_metric.proto");
         println!("cargo:rerun-if-changed=proto/google/pubsub/v1/pubsub.proto");
         println!("cargo:rerun-if-changed=proto/google/rpc/status.proto");
+        println!("cargo:rerun-if-changed=proto/log_entry.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/export.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/export_service.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/log_entry.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/log_group.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/log_group_service.proto");
+        println!(
+            "cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/log_ingestion_service.proto"
+        );
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/log_reading_service.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/log_resource.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/sink.proto");
+        println!("cargo:rerun-if-changed=proto/yandex/cloud/logging/v1/sink_service.proto");
         println!("cargo:rerun-if-changed=proto/vector.proto");
 
         // Create and store the "file descriptor set" from the compiled Protocol Buffers packages.
@@ -150,6 +163,16 @@ fn main() {
                     "proto/dd_trace.proto",
                     "proto/google/pubsub/v1/pubsub.proto",
                     "proto/google/rpc/status.proto",
+                    "proto/yandex/cloud/logging/v1/export.proto",
+                    "proto/yandex/cloud/logging/v1/export_service.proto",
+                    "proto/yandex/cloud/logging/v1/log_entry.proto",
+                    "proto/yandex/cloud/logging/v1/log_group.proto",
+                    "proto/yandex/cloud/logging/v1/log_group_service.proto",
+                    "proto/yandex/cloud/logging/v1/log_ingestion_service.proto",
+                    "proto/yandex/cloud/logging/v1/log_reading_service.proto",
+                    "proto/yandex/cloud/logging/v1/log_resource.proto",
+                    "proto/yandex/cloud/logging/v1/sink.proto",
+                    "proto/yandex/cloud/logging/v1/sink_service.proto",
                     "proto/vector.proto",
                 ],
                 &["proto/", "lib/vector-core/proto/"],
